@@ -30,26 +30,38 @@ snippet cwu
 	}
 snippet fup
 	forceUpdate(${1:callback});
-snippet dp
-	static defaultProps = {
-		${1}: ${2},
-	}
 snippet st
 	state = {
 		${1}: ${2},
 	}
-snippet pt
+snippet dpc
+	static defaultProps = {
+		${1}: ${2},
+	}
+snippet ptc
 	static propTypes = {
 		${1}: React.PropTypes.${2:type},
 	}
+snippet pt
+	${1:ComponentName}.propTypes = {
+		${2:propName}: PropTypes.${3:typeName},
+	}
+snippet dp
+	${1:ComponentName}.defaultProps = {
+		${2}
+	}
 snippet rfc
+	import React from 'react'
+
 	const ${1:ComponentName} = (${2:props}) => {
 		return (
 			<div>
 				$1
 			</div>
-		);
+		)
 	}
+
+	export default $1
 snippet rcc
 	class ${1:ClassName} extends React.Component {
 		state = {
